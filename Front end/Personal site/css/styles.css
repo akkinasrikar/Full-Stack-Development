@@ -1,0 +1,122 @@
+<<<<<<< HEAD
+body
+{
+    background-color: powderblue;
+}
+hr 
+{
+    border-style: none;
+    border-top-style: dotted;
+    border-color: white;
+    border-width: 5px;
+    width: 10%;
+}
+
+h1
+{
+    text-align: left;
+    font-size: 50px;
+    color: olivedrab;
+    font-family: "Times New Roman", Times, serif;
+}   
+h2 
+{
+    text-align: left;
+    font-size: 30px;
+    color: olivedrab;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+h3 
+{
+    text-align: left;
+    font-size: 20px;
+    color: olivedrab;
+    font-family: "Times New Roman", Times, serif;
+}
+
+img:hover 
+{
+    background-color: blueviovar;
+}
+
+.broccoli
+{
+    background-color: brown;
+}
+.tomato
+{
+    background-color: tomato;
+}
+
+.circular
+{
+    border-radius: 20pc;
+}
+
+#heading
+{
+    color: rgb(18, 26, 11);
+=======
+body
+{
+    background-color: powderblue;
+}
+hr 
+{
+    border-style: none;
+    border-top-style: dotted;
+    border-color: white;
+    border-width: 5px;
+    width: 10%;
+}
+
+h1
+{
+    text-align: left;
+    font-size: 50px;
+    color: olivedrab;
+    font-family: "Times New Roman", Times, serif;
+}   
+h2 
+{
+    text-align: left;
+    font-size: 30px;
+    color: olivedrab;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+h3 
+{
+    text-align: left;
+    font-size: 20px;
+    color: olivedrab;
+    font-family: "Times New Roman", Times, serif;
+}
+
+img:hover 
+{
+    background-color: blueviolet;
+}
+
+.broccoli
+{
+    background-color: brown;
+}
+.tomato
+{
+    background-color: tomato;
+}
+
+.circular
+{
+    border-radius: 20pc;
+}
+
+#heading
+{
+    color: rgb(18, 26, 11);
+>>>>>>> 43b1900cceaf826cfb03965603e438fc6e6152d3
+}

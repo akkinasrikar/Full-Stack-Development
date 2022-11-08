@@ -1,0 +1,656 @@
+<<<<<<< HEAD
+#title
+{
+    background-color: rgb(238, 142, 227);
+}
+
+
+.myfont
+{
+    font-family: "ubuntu";
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: rgb(255, 255, 255);
+    padding-top: 10rem;
+    padding-left: 17px;
+}
+
+.btn
+{
+    padding-left: 17rem;
+}
+
+body
+{
+    font-family: "ubuntu";
+}
+
+.navbar-brand
+{
+    font-family: "ubuntu";
+    font-weight: Bold;
+}
+
+.nav-item
+{
+    padding: 0 18px;
+    font-size: 25px;
+}
+
+.nav-item:hover
+{
+    scale: 1.2;
+    transition: 0.5s;
+}
+
+.navbar
+{
+    padding-bottom: 100rem;
+}
+
+.download-button
+{
+    margin: 15% 3% 5% 0%;
+    transition: 0.5s;
+}
+
+.download-button:hover
+{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.title-image
+{
+    transform: rotate(25deg);
+    padding-left: 100px;
+    transition: 0.5s;
+}
+
+/* best title-image hover animation before and after */
+
+
+.title-image:hover
+{
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+
+#features
+{
+    padding: 5% 7% 5% 1%;
+}
+
+.feature-box
+{
+    text-align: center;
+    padding: 1%;
+}
+
+.h3font
+{
+    font-family: "Ubuntu";
+    font-size: 3rem;
+}
+
+p
+{
+    color: #8f8f8f;
+    font-size: 1.2rem;
+}
+
+.iicons
+{
+    font-size: 3rem;
+    color: #000000;
+    padding: 1%;
+    transition: 0.5s;
+}
+
+.iicons:hover
+{
+    color: rgb(238, 142, 227);
+}
+
+
+#testimonials
+{
+    padding: 7% 15%;
+    text-align: center;
+    background-color: rgb(238, 142, 227);
+    color: white;
+}
+
+.testh2
+{
+    font-family: "ubuntu";
+    font-size: 3rem;
+    background-image: linear-gradient(
+    -225deg,
+    #ad10f7 0%,
+    #0fa7ed 29%,
+    #ff1361 67%,
+    white 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+.testimonial-image
+{
+    width: 20rem;
+    border-radius: 100%;
+    margin-top: 4%;
+    transition: 0.5s;
+
+}
+
+.testimonial-image:hover
+{
+    transform: scale(1.1);
+    border-radius: 10%;
+    transition: 0.5s;
+}
+
+
+.testem
+{
+    font-family: "ubuntu";
+    font-size: 1.5rem;
+    margin: 4%;
+    text-align: center;
+}
+
+#press
+{
+    background-color: rgb(238, 142, 227);
+    text-align: center;
+    padding-bottom: 8%;
+}
+
+.comlogo
+{
+    width: 20rem;
+    padding: 2%;
+    transition: 0.5s;
+}
+
+.comlogo:hover
+{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.carousel-item
+{
+    padding: 1%;
+}
+
+.pricing
+{
+    text-align: center;
+    font-size: 4rem;
+    font-family: "ubuntu";
+    padding: 3% 0% 3% 0%;
+    transition: 0.5s;
+}
+
+.ptitle
+{
+    font-weight: bold;
+    font-family: "ubuntu";
+    text-align: center;
+}
+
+
+.pricing:hover
+{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.card::after
+{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+}
+
+.card:hover 
+{
+    transform: scale(1.02, 1.02);
+    -webkit-transform: scale(1.02, 1.02);
+    backface-visibility: hidden; 
+    will-change: transform;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.75) !important;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.card:hover::after 
+{
+    opacity: 1;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.card:hover .btn-outline-primary
+{
+    color:white;
+    background:#007bff;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.card-header
+{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#cta
+{
+    text-align: center;
+    font-family: "ubuntu";
+    padding: 5% 0% 1% 0%;
+    background-color: rgb(238, 142, 227);
+}
+
+.ctah3
+{
+    font-size: 4rem;
+}
+
+.coderimage
+{
+    margin-right: 100px;
+    margin-top: 100px;
+    height: 400px;
+    transition: 0.5s;
+}
+
+.coderimage:hover
+{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#footer
+{
+    text-align: center;
+    padding: 7% 15%;
+}
+
+.scicons
+{
+    font-size: 2rem;
+    color: #000000;
+    padding: 1%;
+    transition: 0.5s;
+}
+
+.scicons:hover
+{
+    color: rgb(238, 142, 227);
+    transition: 0.5s;
+    font-size: 3rem;
+}
+
+.floating { 
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+=======
+#title
+{
+    background-color: rgb(238, 142, 227);
+}
+
+
+.myfont
+{
+    font-family: "ubuntu";
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: rgb(255, 255, 255);
+    padding-top: 10rem;
+    padding-left: 17px;
+}
+
+.btn
+{
+    padding-left: 17rem;
+}
+
+body
+{
+    font-family: "ubuntu";
+}
+
+.navbar-brand
+{
+    font-family: "ubuntu";
+    font-weight: Bold;
+}
+
+.nav-item
+{
+    padding: 0 18px;
+    font-size: 25px;
+}
+
+.nav-item:hover
+{
+    scale: 1.2;
+    transition: 0.5s;
+}
+
+.navbar
+{
+    padding-bottom: 100rem;
+}
+
+.download-button
+{
+    margin: 15% 3% 5% 0%;
+    transition: 0.5s;
+}
+
+.download-button:hover
+{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.title-image
+{
+    transform: rotate(25deg);
+    padding-left: 100px;
+    transition: 0.5s;
+}
+
+/* best title-image hover animation before and after */
+
+
+.title-image:hover
+{
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+
+#features
+{
+    padding: 5% 7% 5% 1%;
+}
+
+.feature-box
+{
+    text-align: center;
+    padding: 1%;
+}
+
+.h3font
+{
+    font-family: "Ubuntu";
+    font-size: 3rem;
+}
+
+p
+{
+    color: #8f8f8f;
+    font-size: 1.2rem;
+}
+
+.iicons
+{
+    font-size: 3rem;
+    color: #000000;
+    padding: 1%;
+    transition: 0.5s;
+}
+
+.iicons:hover
+{
+    color: rgb(238, 142, 227);
+}
+
+
+#testimonials
+{
+    padding: 7% 15%;
+    text-align: center;
+    background-color: rgb(238, 142, 227);
+    color: white;
+}
+
+.testh2
+{
+    font-family: "ubuntu";
+    font-size: 3rem;
+    background-image: linear-gradient(
+    -225deg,
+    #ad10f7 0%,
+    #0fa7ed 29%,
+    #ff1361 67%,
+    white 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+.testimonial-image
+{
+    width: 20rem;
+    border-radius: 100%;
+    margin-top: 4%;
+    transition: 0.5s;
+
+}
+
+.testimonial-image:hover
+{
+    transform: scale(1.1);
+    border-radius: 10%;
+    transition: 0.5s;
+}
+
+
+.testem
+{
+    font-family: "ubuntu";
+    font-size: 1.5rem;
+    margin: 4%;
+    text-align: center;
+}
+
+#press
+{
+    background-color: rgb(238, 142, 227);
+    text-align: center;
+    padding-bottom: 8%;
+}
+
+.comlogo
+{
+    width: 20rem;
+    padding: 2%;
+    transition: 0.5s;
+}
+
+.comlogo:hover
+{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.carousel-item
+{
+    padding: 1%;
+}
+
+.pricing
+{
+    text-align: center;
+    font-size: 4rem;
+    font-family: "ubuntu";
+    padding: 3% 0% 3% 0%;
+    transition: 0.5s;
+}
+
+.ptitle
+{
+    font-weight: bold;
+    font-family: "ubuntu";
+    text-align: center;
+}
+
+
+.pricing:hover
+{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.card::after
+{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+}
+
+.card:hover 
+{
+    transform: scale(1.02, 1.02);
+    -webkit-transform: scale(1.02, 1.02);
+    backface-visibility: hidden; 
+    will-change: transform;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.75) !important;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.card:hover::after 
+{
+    opacity: 1;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.card:hover .btn-outline-primary
+{
+    color:white;
+    background:#007bff;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.card-header
+{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#cta
+{
+    text-align: center;
+    font-family: "ubuntu";
+    padding: 5% 0% 1% 0%;
+    background-color: rgb(238, 142, 227);
+}
+
+.ctah3
+{
+    font-size: 4rem;
+}
+
+.coderimage
+{
+    margin-right: 100px;
+    margin-top: 100px;
+    height: 400px;
+    transition: 0.5s;
+}
+
+.coderimage:hover
+{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#footer
+{
+    text-align: center;
+    padding: 7% 15%;
+}
+
+.scicons
+{
+    font-size: 2rem;
+    color: #000000;
+    padding: 1%;
+    transition: 0.5s;
+}
+
+.scicons:hover
+{
+    color: rgb(238, 142, 227);
+    transition: 0.5s;
+    font-size: 3rem;
+}
+
+.floating { 
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+>>>>>>> 43b1900cceaf826cfb03965603e438fc6e6152d3
+}
