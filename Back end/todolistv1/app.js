@@ -29,13 +29,34 @@ app.get('/news', (req, res) => {
 
 app.post('/', (req, res) => {
     let item = req.body.item;
-    if (req.body.list === "Work") {
-        workItems.push(item);
+    var flag = false;
+    if (item.length==0){
+        if(req.body.listpop === 'Work'){
+            workItems.pop();
+            console.log(workItems);
+            flag = true;
+        }else{
+            items.pop();
+            console.log(items);
+            flag = false;
+        }
+    }
+    else{
+        if (req.body.list === "Work") {
+            workItems.push(item);
+            flag = true;
+        } else {
+            items.push(item);
+            flag = false;
+        }
+    }
+
+    if(flag){
         res.redirect('/work');
-    } else {
-        items.push(item);
+    }else{
         res.redirect('/');
     }
+    
 });
 
 
