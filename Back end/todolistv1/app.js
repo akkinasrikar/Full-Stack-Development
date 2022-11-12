@@ -1,12 +1,37 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const date = require(__dirname + '/date.js');
+const mongoose = require('mongoose'); 
+const _ = require('lodash');
 var path = require('path')
 
 
-let items = [];
-let workItems = [];
 
+mongoose.connect('mongodb+srv://srikarakkina:MNbvcxz123@cluster0.3yvzyky.mongodb.net/todolistDB', {useNewUrlParser: true, useUnifiedTopology: true});
+
+const itemsSchema = {
+    name: String 
+};
+
+const listSchema = {
+    name: String,
+    itemslist: [itemsSchema]
+};
+
+
+const Item = mongoose.model('Item', itemsSchema);
+const List = mongoose.model('List', listSchema); 
+
+
+const a = new Item({
+    name:'coding'
+});
+const b = new Item({
+    name:'sleeping'
+});
+
+
+const defaultItems = [a,b];
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, '/public')));
@@ -15,57 +40,96 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
 
     let day = date.getDate();
-    res.render('list', {listTitle: day, newListItems: items});
-});
-
-app.get('/work', (req, res) => {
-    res.render('list', {listTitle: "Work", newListItems: workItems});
-});
-
-app.get('/news', (req, res) => {
-    res.render('about');
-});
-
-
-app.post('/', (req, res) => {
-    let item = req.body.item;
-    var flag = false;
-    if (item.length==0){
-        if(req.body.listpop === 'Work'){
-            workItems.pop();
-            console.log(workItems);
-            flag = true;
-        }else{
-            items.pop();
-            console.log(items);
-            flag = false;
-        }
-    }
-    else{
-        if (req.body.list === "Work") {
-            workItems.push(item);
-            flag = true;
+    
+    Item.find({}, function(err, foundItems){
+        if(err){
+            console.log(err);
         } else {
-            items.push(item);
-            flag = false;
+            res.render('list', {listTitle: day, newListItems: foundItems});
         }
-    }
-
-    if(flag){
-        res.redirect('/work');
-    }else{
-        res.redirect('/');
-    }
+    });
     
 });
 
 
 
+app.get('/news', (req, res) => {
+    res.render('about');
+});
+
+app.get('/:customListName', (req, res) => {
+    const customListName = _.capitalize(req.params.customListName);
+
+    List.findOne({name: customListName}, function(err, foundList){
+        if(!err){
+            if(!foundList){
+                const list = new List({
+                    name: customListName,
+                    itemslist: defaultItems
+                });
+                list.save();
+                res.redirect('/' + customListName);
+            } else {
+                res.render('list', {listTitle: foundList.name, newListItems: foundList.itemslist});
+            }
+        } else {    
+            console.log(err);
+        }
+
+    });
+
+});
 
 
+app.post('/', (req, res) => {
+
+    let itemword = req.body.item;
+    let listName = req.body.list;
+
+    const item = new Item({
+        name: itemword
+    });
+
+    if(listName === date.getDate()){
+        item.save();
+        res.redirect('/');
+    } else {
+        List.findOne({name: listName}, function(err, foundList){
+            foundList.itemslist.push(item);
+            foundList.save();
+            res.redirect('/' + listName);
+        });
+    }
+    
+});
 
 
+app.post('/delete', (req, res) => {
+    const checkedItemId = req.body.checkbox;
+    const listName = req.body.listName;
 
-app.listen(3000, () => {
+    if(listName === date.getDate()){
+        Item.findByIdAndRemove(checkedItemId, function(err){
+            if(!err){
+                console.log('successfully deleted');
+                res.redirect('/');
+            } else {
+                console.log(err);
+            }
+        });
+    } else {
+        List.findOneAndUpdate({name: listName}, {$pull: {itemslist: {_id: checkedItemId}}}, function(err, foundList){
+            if(!err){
+                res.redirect('/' + listName);
+            } else {
+                console.log(err);
+            }
+        });
+    }
+});
+
+var port = process.env.PORT || 3000;
+
+app.listen(port, () => {
     console.log('Server started on port 3000');
 });
